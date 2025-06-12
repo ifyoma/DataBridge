@@ -21,7 +21,8 @@ const port = process.env.PORT || 3000;
 
 // Configure Express session middleware
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET!,
+    
     resave: false,
     saveUninitialized: true
 }));
