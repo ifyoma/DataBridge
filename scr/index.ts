@@ -1,10 +1,11 @@
 
-import express, { Request, Response, NextFunction } from 'express';
-import session, { SessionData } from 'express-session';
+import express from 'express';
+import session from 'express-session';
+import dotenv from 'dotenv';
 import * as msal from '@azure/msal-node';
 import axios from 'axios';
-import dotenv from 'dotenv';
 import path from 'path'; // Import the path module
+
 
 // Define a custom interface for the session object
 interface CustomSession extends SessionData {
