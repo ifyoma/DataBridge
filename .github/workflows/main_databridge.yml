@@ -24,7 +24,7 @@ jobs:
           node-version: '18.x'
 
       - name: npm install, build, and test
-        working-directory: ./DataBridge
+        #working-directory: ./DataBridge
         run: |
           npm install
           npm run build --if-present
@@ -32,7 +32,7 @@ jobs:
 
       - name: Zip artifact for deployment
         run: zip -r release.zip ./* 
-        working-directory: ./DataBridge
+        #working-directory: ./DataBridge
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
