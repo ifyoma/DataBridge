@@ -4,8 +4,11 @@
     "module": "commonjs",
     "outDir": "dist",
     "rootDir": "scr",
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "include": ["scr/index.ts"],
+  "include": ["scr/**/*.ts"],
   "exclude": ["node_modules"]
 }
