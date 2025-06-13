@@ -3,11 +3,9 @@
     "target": "ES6",
     "module": "commonjs",
     "outDir": "dist",
-    "rootDir": "scr",
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["scr/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["index.ts"]
 }
 
