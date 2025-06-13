@@ -18,11 +18,11 @@ interface CustomSession extends SessionData {
 }
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // Configure Express session middleware
 app.use(session({
-    secret: process.env.SESSION_SECRET!,
+    secret: '3137fca3-ff2a-44f3-8404-a0cd8433ad93',
     
     resave: false,
     saveUninitialized: true
@@ -34,10 +34,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Create MSAL application object
 const pca = new msal.ConfidentialClientApplication({
     auth: {
-        clientId: process.env.AZURE_AD_CLIENT_ID || '', // Use client ID from environment variable
-        authority: process.env.AZURE_AD_AUTHORITY || '', // Use authority from environment variable
-        clientSecret: process.env.AZURE_AD_CLIENT_SECRET || '', // Use client secret from environment variable
-        knownAuthorities: [process.env.AZURE_AD_AUTHORITY || ''],
+        clientId: '855c171d-2610-4761-90c2-3ea99780167d', // Use client ID from environment variable
+        authority: 'https://login.microsoftonline.com/e82f3871-a94d-4de0-9abd-c8b5645354da', // Use authority from environment variable
+        clientSecret: 'PrE8Q~kc9p1zd3TFyuqGhoNNtu~sfH551aseadgr', // Use client secret from environment variable
+        knownAuthorities: ['https://login.microsoftonline.com/e82f3871-a94d-4de0-9abd-c8b5645354da'],
     },
     system: {
         loggerOptions: {
