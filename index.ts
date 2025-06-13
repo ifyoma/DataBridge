@@ -20,9 +20,6 @@ interface CustomSession extends SessionData {
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
 
 // Configure Express session middleware
 app.use(session({
