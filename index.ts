@@ -58,7 +58,7 @@ app.get('/', (req: Request, res: Response) => {
 app.get('/login', async (req: Request, res: Response) => {
     const authUrl = await pca.getAuthCodeUrl({
         scopes: ['openid', 'profile', 'email'],
-        redirectUri: 'https://widget1.azurewebsites.net/auth/callback'
+        redirectUri: 'https://databridge-fzd8c8gmbcd9f8h4.canadacentral-01.azurewebsites.net/auth/callback'
     });
     res.redirect(authUrl);
 });
@@ -68,7 +68,7 @@ app.get('/auth/callback', async (req: Request, res: Response) => {
     const tokenRequest = {
         code: req.query.code as string,
         scopes: ['openid', 'profile', 'email'],
-        redirectUri: 'https://widget1.azurewebsites.net/auth/callback'
+        redirectUri: 'https://databridge-fzd8c8gmbcd9f8h4.canadacentral-01.azurewebsites.net/auth/callback'
     };
 
     try {
